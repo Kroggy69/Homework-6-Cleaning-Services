@@ -1,0 +1,518 @@
+@import url('https://fonts.googleapis.com/css2?family=Battambang:wght@700&family=Lato:wght@100;300;400;700&family=Nunito:wght@200;300;400;500;700;800&family=Orbitron&family=Poppins:wght@200;300;400;500;700;800&display=swap');
+
+:root {
+    --section-top-bot-padding: 100px 0;
+    --font-family-Hero-Title: 'Nunito', sans-serif;
+    --font-family-paragraph: 'Poppins', sans-serif;
+    --titlecolor: #25f2a3;
+    --paragraph-color: grey;
+    --fw-ExtraLight: 200;
+    --fw-Light: 300;
+    --fw-Regular: 400;
+    --fw-Medium: 500;
+    --fw-Bold: 700;
+    --fw-ExtraBold: 800;
+    --fs-paragraph: 15px;
+    --fs-Hero-title: 48px;
+    --border-checking: 1px solid red;
+    --feature-box-height: calc(400px / 2 - 20px);
+    --bg-linear: linear-gradient(90deg, rgba(14,211,136,1) 0%, rgba(46,161,95,1) 100%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-family: var(--font-family-Hero-Title);
+}
+
+section {
+    width: 100%;
+    padding: var(--section-top-bot-padding);
+}
+
+.benefit-container,
+.about-container,
+.service-container,
+.testimonial-container
+{
+    width: 1365px;
+    margin: auto;
+}
+
+
+/* /////// Benefit /////// */
+.title {
+    font-family: var(--font-family-Hero-Title);
+    font-size: var(--fs-paragraph);
+    font-weight: var(--fw-ExtraBold);
+    color: var(--titlecolor);
+}
+
+.benefit-container .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.benefit-container .row .detail {
+    width: 400px;
+}
+
+.benefit-container .row .detail .card {
+    width: 100%;
+    height: 400px;
+}
+
+.benefit-container .row .feature {
+    width: 800px;
+    display: flex;
+    gap: 40px;
+}
+
+.benefit-container .row .feature .card {
+    width: 400px;
+    height: 400px;
+}
+
+.section-b-title {
+    font-family: var(--font-family-Hero-Title);
+    font-weight: var(--fw-ExtraBold);
+    font-size: var(--fs-Hero-title);
+    padding: 0 .5px;
+}
+
+.benefit-container .row .detail .card {
+    font-family: var(--font-family-paragraph);
+    font-size: var(--fs-paragraph);
+    font-weight: var(--fw-Light);
+}
+
+.read-more {
+    text-decoration: none;
+    font-family: var(--font-family-paragraph);
+    display: block;
+    width: 170px;
+    height: 53px;
+    text-align: center;
+    line-height: 53px;
+    margin-top: 50px;
+    border-radius: 30px;
+    background: var(--bg-linear);
+    color: white;
+    box-shadow: 0 5px 20px #4cd786a9;
+    transition: .4s;
+}
+
+.read-more:hover {
+    background: rgba(0, 0, 0, 0);
+    color: black;
+    box-shadow: 0 5px 10px #000000a9;
+}
+
+.benefit-container .feature .top-left-bot-left,
+.benefit-container .feature .top-right-bot-right
+{ 
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.benefit-container .feature .content {
+    height: var(--feature-box-height);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.1);
+    border-radius: 17px;
+    transition: .3s;
+}
+
+.benefit-container .feature .content:hover {
+    background: var(--bg-linear);
+}
+
+.benefit-container .feature .content:hover img {
+    filter: invert(77%) sepia(55%) saturate(3310%) hue-rotate(103deg) brightness(92%) contrast(89%);
+}
+
+.benefit-container .feature .content:hover .feature-txt h3,
+.benefit-container .feature .content:hover .feature-txt p
+{
+    color: white;
+    padding: 0 10px;
+}
+
+.benefit-container .feature .feature-icon {
+    width: 100px;
+    height: var(--feature-box-height);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.benefit-container .feature .feature-icon img {
+    width: 58px;
+    height: 58px;
+    object-fit: contain;
+}
+
+.benefit-container .feature .feature-txt {
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.line-hover {
+    height: 100%;
+    border-left: 1px solid white;
+    position: absolute;
+    left: 0;
+    top: 80px;
+    transition: 1s;
+}
+
+.benefit-container .feature .content:hover .line-hover {
+    top: 0;
+}
+
+.benefit-container .feature .feature-txt h3 {
+    font-family: var(--font-family-Hero-Title);
+    font-weight: var(--fw-ExtraBold);
+    color: black;
+    transition: .5s;
+}
+
+.benefit-container .feature .feature-txt p {
+    font-family: var(--font-family-paragraph);
+    font-size: 14px;
+    font-weight: var(--fw-Light);
+    color: rgb(62, 62, 62);
+    transition: .5s;
+    padding-right: 30px;
+}
+
+/* ////// About Us /////// */
+.about-section {
+    position: relative;
+}
+
+.circle-bg {
+    width: 1200px;
+    height: 1200px;
+    position: absolute;
+    background-color: #f8f8f8;
+    z-index: -1;
+    border-radius: 50%;
+    right: 0px;
+    top: 0;
+}
+
+.about-container .row {
+    width: 100%;
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+.about-img {
+    width: 100%;
+    height: 550px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: -1px 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.about-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.about-txt {
+    width: calc(1365px - 500px);
+    font-family: var(--font-family-Hero-Title);
+}
+
+.about-txt h5 {
+    line-height: 60px;
+    font-size: 38px;
+    width: 88%;
+    padding: 23px 0;
+    margin-top: 90px;
+}
+
+.about-txt p {
+    font-family: var(--font-family-paragraph);
+    font-size: var(--fs-paragraph);
+    padding: 2px 0;
+}
+
+
+/* ///// Service ///// */
+.service-bg{
+    width: 100%;
+    height: 100%;
+    background-image: url(../Image/service-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    z-index: 1;
+}
+
+.overlay-darken {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.25);
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.overlay-bg-dot {
+    position: absolute;
+    background-image: url(../Image/Overlay-dot.png);
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.service-title,
+.service-b-title {
+    text-align: center;
+}
+
+.service-b-title {
+    color: white;
+}
+
+.service-container .row {
+    margin-top: 70px;
+    padding-top: 20px;
+    display: flex;
+    gap: 39px;
+}
+
+.service-container .row .col-3 {
+    width: 100%;
+}
+
+.service-container .row .col-3 .service-choice {
+    width: 311.25px;
+    height: 440px;
+    background-color: white;
+    border-radius: 20px;
+    transition: .4s;
+}
+
+.circle-service {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 155px;
+}
+
+.circle-service .circle-hover {
+    width: 100px;
+    height: 100px;
+    background-color: #45bd91;
+    border-radius: 50%;
+    position: absolute;
+    z-index: 2;
+    transition: .6s;
+}
+
+.service-container .row .col-3 .service-choice:hover .circle-service .circle-hover {
+    transform: scale(1.2);
+}
+
+.service-container .row .col-3 .service-choice:hover {
+    transform: translateY(-20px);
+}
+
+.circle-service .circle {
+    width: 120px;
+    height: 120px;
+    background-color: #d8fff1d0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    z-index: 3;
+}
+
+.circle-service .circle img {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+}
+
+.service-choice h1 {
+    font-family: var(--font-family-Hero-Title);
+    font-size: 20px;
+    font-weight: var(--fw-ExtraBold);
+    text-align: center;
+    padding: 0 40px;
+    line-height: 30px;
+    margin-top: 15px;
+    color: black;
+}
+
+.service-choice p {
+    font-family: var(--font-family-paragraph);
+    text-align: center;
+    font-size: var(--fs-paragraph);
+    color: var(--paragraph-color);
+    padding: 0 30px;
+    margin-top: 25px;
+    line-height: 30px;
+}
+
+
+/* ////// Testimonial ////// */
+
+.testimonial {
+    background-color: #f8f8f8;
+}
+
+.testimonial-container {
+    position: relative;
+}
+
+.testimonial-circle {
+    width: 95px;
+    height: 95px;
+    float: left;
+    background: var(--bg-linear);
+    box-shadow: 0 5px 20px #4cd786a9;
+    border-radius: 50%;
+    position: absolute;
+  
+}
+
+.left-right-arrow {
+    width: 200px;
+    display: flex;
+    position: absolute;
+    right: 0;
+    top: 82px;
+    justify-content: center;
+    gap: 40px;
+}
+
+.left-right-arrow .arrow-left,
+.left-right-arrow .arrow-right
+{
+    width: 50%;
+    font-size: 20px;
+    color: grey;
+}
+
+.left-right-arrow .arrow-left {
+    display: flex;
+    justify-content: end;
+}
+
+.left-right-arrow .arrow-left i,
+.left-right-arrow .arrow-right i
+{
+    transition: .4s;
+    
+}
+
+.left-right-arrow .arrow-left:hover .fa-arrow-left-long{
+    padding-right: 30px;
+}
+
+.left-right-arrow .arrow-right:hover .fa-arrow-right-long{
+    padding-left: 30px;
+}
+
+.testimonial-circle p {
+    color: white;
+    font-size: 90px;
+    font-family: var(--font-family-Hero-Title);
+    margin-top: -40px;
+    letter-spacing: -6px;
+    margin-left: 30px
+}
+
+.title-holder {
+    padding-left: 130px;
+}
+
+.testimonial-container .p-row {
+    margin-top: 120px;
+    display: flex;
+    gap: 50px;
+}
+
+.testimonial-container .col-4 {
+    width: calc(1365px / 3 - 25px);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: -1px 2px 30px rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-container .col-4 .p-card {
+    height: 270px;
+    background-color: white;
+}
+
+.testimonial-container .col-4 .p-card .card-content-holder {
+    padding: 50px 60px;
+}
+
+.testimonial-container .col-4 .p-card p {
+    font-family: var(--font-family-paragraph);
+    font-size: var(--fs-paragraph);
+    color: var(--paragraph-color);
+}
+
+.card-content-holder .row {
+    display: flex;
+    margin-top: 33px;
+}
+
+.card-content-holder .row .profile {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile .img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+}
+
+.profile .name h1 {
+    font-weight: var(--fw-ExtraBold);
+    font-size: 18px;
+}
+
+.profile img {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    object-fit: cover;
+}
